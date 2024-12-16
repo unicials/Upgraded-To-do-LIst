@@ -11,12 +11,6 @@ triggerImages.forEach((image) => {
     });
 });
 
-closeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        button.closest(".modal").style.display = "none";
-    });
-});
-
 window.addEventListener("click", (event) => {
     const modals = document.querySelectorAll(".modal");
     modals.forEach((modal) => {

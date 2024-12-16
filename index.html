@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+</head>
+<body>
+    <div class="container">
+        <div class="todo-site">
+            <h2>To-Do List <img src="images/icon.png" alt="Logo"></h2>
+        </div>
+
+           <div class="search">
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input class="search-input" type="search" placeholder="Search Task" oninput="searchTasks(this.value)">
+            <ul id="suggestions-list"></ul>
+        </div>
+        <div class="select-category">Select Category</div>
+
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="images/avatar.png" alt="Image 1" class="trigger-image" data-modal-id="modal1">
+                <p class="image-caption">Personal</p>
+            </div>
+            <div class="image-item">
+                <img src="images/working.png" alt="Image 2" class="trigger-image" data-modal-id="modal2">
+                <p class="image-caption">Work</p>
+            </div>
+            <div class="image-item">
+                <img src="images/cardiogram.png" alt="Image 3" class="trigger-image" data-modal-id="modal3">
+                <p class="image-caption">Health</p>
+            </div>
+            <div class="image-item">
+                <img src="images/online-shopping.png" alt="Image 4" class="trigger-image" data-modal-id="modal4">
+                <p class="image-caption">Shopping</p>
+            </div>
+            <div class="image-item">
+                <img src="images/living.png" alt="Image 5" class="trigger-image" data-modal-id="modal5">
+                <p class="image-caption">Household Chores</p>
+            </div>
+            <div class="image-item">
+                <img src="images/box.png" alt="Image 6" class="trigger-image" data-modal-id="modal6">
+                <p class="image-caption">Miscellaneous</p>
+            </div>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <input type="text" id="input-box1" placeholder="Add your task  (Personal)">
+                <button onclick="addTask('modal1')">Add</button>
+                <ul id="list-container1" class="task-list">
+                    <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <input type="text" id="input-box2" placeholder="Add your task  (Work)">
+                <button onclick="addTask('modal2')">Add</button>
+                <ul id="list-container2" class="task-list">
+                    <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <input type="text" id="input-box3" placeholder="Add your task  (Health)">
+                <button onclick="addTask('modal3')">Add</button>
+                <ul id="list-container3" class="task-list">
+                    <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal 4 -->
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <input type="text" id="input-box4" placeholder="Add your task  (Shopping)">
+                <button onclick="addTask('modal4')">Add</button>
+                <ul id="list-container4" class="task-list">
+                    <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal 5 -->
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <input type="text" id="input-box5" placeholder="Add your task  (Household)">
+                <button onclick="addTask('modal5')">Add</button>
+                <ul id="list-container5" class="task-list">
+                    <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal 6 -->
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <input type="text" id="input-box6" placeholder="Add your task  (Miscellaneous)">
+                <button onclick="addTask('modal6')">Add</button>
+                <ul id="list-container6" class="task-list">
+                    <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+<footer><footer>
+    &copy; 2024 Group 5 / Fareed Zakariah | fareedzak7@gmail.com    
+  </footer>
+ 
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

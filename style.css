@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    height: 90vh;
+    width: 100vw;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background-size:contain;
+    background-position: center;
+
+}
+.select-category {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+    transform: translate(130px);
+    font-size: large;
+  }
+
+.todo-site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    width: 700%;
+    max-width: 600px;
+    background: #91c6f4;
+    margin: 50px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.search {
+    padding: 15px;
+    border-radius: 28px;
+    background: #f6f6f6;
+    width: 500px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    margin-right: 10px;
+}
+
+.search-input {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    width: 100%;
+    color: #333333;
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 70%;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.image-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.trigger-image {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 10px;
+   
+}
+.trigger-image:hover {
+    transform: scale(1.1); /* Slightly enlarges the image */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+    filter: brightness(1.2); /* Slightly brightens the image */
+  }
+
+
+
+.image-caption {
+    font-size: 18px; 
+    font-weight: bold;
+    color: #fff;
+    margin-top: 0.01px;
+    text-transform: uppercase;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%; 
+    max-width: 800px; 
+    height: 400px; 
+    border-radius: 10px; 
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    border:1px solid #888;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: #000;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease; 
+  }
+  ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 10px; 
+  }
+  
+  ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+  }
+  
+  ul li.checked::before {
+    background-image: url(images/checked.png);
+  }
+  
+  ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer; 
+  }
+  
+  ul li span:hover {
+    background: #edeef0;
+    transition: background-color 0.3s ease;
+  }
+  #suggestions-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    position: absolute;
+    width: 50%;
+    z-index: 100;
+    display: none;
+}
+
+#suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+footer {
+    position: fixed; 
+    bottom: 0;       
+    left: 0;         
+    width: 100%;      
+    background-color: transparent;
+    color: white;     
+    text-align: left;
+    padding: 10px 20px; 
+    font-size: 14px;  
+    z-index: 1000;   
+    font-family: cursive;
+  }
